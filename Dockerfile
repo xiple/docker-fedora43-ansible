@@ -8,6 +8,7 @@ ENV pip_packages="ansible"
 
 RUN dnf -y upgrade \
     && dnf -y install python3 python3-pip python3-libdnf5 python3-rpm \
+    && dnf -y install systemd \
     && dnf clean all
 
 # Upgrading pip
